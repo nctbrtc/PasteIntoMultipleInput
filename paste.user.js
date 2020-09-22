@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  helps you to paste to multiple inputs!
 // @author       Mr. Barutcu
-// @match        */Gradebook/*
+// @match        /Gradebook/
 // @grant        none
 
 
@@ -22,8 +22,12 @@ $('input').bind('paste', null, function(e){
         for(i=0; i < columns.length; i++){
             var sayi = ((i*2)+4);
             var formattedNumber = ("0" + sayi).slice(-2);
-
-            $('input[name="ctl00$c$gradeAssignment$rg1$ctl00$ctl'+formattedNumber+'$decimalTbxNumericValue"]').val(columns[i]);
+if (columns[i]=='null') {
+            $('input[name="ctl00$c$gradeAssignment$rg1$ctl00$ctl'+formattedNumber+'$decimalTbxNumericValue"]').val('');
+}
+            else {
+                  $('input[name="ctl00$c$gradeAssignment$rg1$ctl00$ctl'+formattedNumber+'$decimalTbxNumericValue"]').val(columns[i]);
+            }
         }
     }, 0);
 });
