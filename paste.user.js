@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  helps you to paste to multiple inputs!
 // @author       Mr. Barutcu
-// @match        /Gradebook/
+// @match        */Gradebook/*
 // @grant        none
 
 
