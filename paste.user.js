@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         EasyPaste
+// @name         EasyPaste v2
 // @namespace    NA
 // @version      0.1
 // @description  helps you to paste to multiple inputs!
