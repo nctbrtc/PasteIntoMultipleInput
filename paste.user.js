@@ -21,9 +21,22 @@ $('input').bind('paste', null, function(e){
 
         for(i=0; i < columns.length; i++){
             var sayi = ((i*2)+4);
-            var formattedNumber = ("0" + sayi).slice(-2);
+            
+            if (sayi>99)
+                               
+            {
+
+            $('input[name="ctl00$c$gradeAssignment$rg1$ctl00$ctl'+sayi+'$decimalTbxNumericValue"]').val(columns[i]);
+            
+            }
+            else {
+             var formattedNumber = ("0" + sayi).slice(-2);
 
             $('input[name="ctl00$c$gradeAssignment$rg1$ctl00$ctl'+formattedNumber+'$decimalTbxNumericValue"]').val(columns[i]);
+            
+            }
+            
+           
         }
     }, 0);
 });
